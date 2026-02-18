@@ -122,7 +122,7 @@ repo = 'honza/vim-snippets'
 repo = 'tkatsu/vim-c-snippets'
 depends = ['neosnippet-snippets', 'vim-snippets', 'deoplete.nvim', 'neosnippet']
 if = 1
-on_ft = ['c']
+on_ft = ['c', 'memo']
 hook_source = '''
   let g:my_copyright_name = 'My Corpolation.'
 '''
@@ -268,25 +268,25 @@ if = ''' 1 && dein#tap('deoplete.nvim') '''
 [[plugins]]
 repo = 'tpope/vim-dispatch'
 
-[[plugins]]
-#repo = 'OmniSharp/omnisharp-vim'
-#オリジナルに対し、OmniServer がスタートするのを待つことを促すダイアログを追加
-repo = 'tkatsu/omnisharp-vim'
-depends = ['deoplete.nvim', 'syntastic', 'vim-dispatch', 'ultisnips','unite.vim']
-if = ''' 0 && has('python') && !has('unix') && dein#tap('deoplete.nvim') '''
-timeout = 1800
-on_ft = ['cs']
-hook_source = '''
-    exec 'source ' . g:vimfiles_dir . '/omnisharprc.vim'
-'''
-hook_post_update = '''
-  if dein#util#_is_windows()
-    let cmd = 'MSBuild.exe server/OmniSharp.sln /p:Platform="Any CPU"'
-  else
-    let cmd = 'xbuild server/OmniSharp.sln'
-  endif
-  let g:dein#plugin.build = cmd
-'''
+#[[plugins]]
+##repo = 'OmniSharp/omnisharp-vim'
+##オリジナルに対し、OmniServer がスタートするのを待つことを促すダイアログを追加
+#repo = 'tkatsu/omnisharp-vim'
+#depends = ['deoplete.nvim', 'syntastic', 'vim-dispatch', 'ultisnips','unite.vim']
+#if = ''' 0 && has('python') && !has('unix') && dein#tap('deoplete.nvim') '''
+#timeout = 1800
+#on_ft = ['cs']
+#hook_source = '''
+#    exec 'source ' . g:vimfiles_dir . '/omnisharprc.vim'
+#'''
+#hook_post_update = '''
+#  if dein#util#_is_windows()
+#    let cmd = 'MSBuild.exe server/OmniSharp.sln /p:Platform="Any CPU"'
+#  else
+#    let cmd = 'xbuild server/OmniSharp.sln'
+#  endif
+#  let g:dein#plugin.build = cmd
+#'''
 
 [[plugins]]
 repo = 'SirVer/ultisnips'

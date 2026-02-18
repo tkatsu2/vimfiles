@@ -1,4 +1,4 @@
-" Last Change: 2018-11-09.
+" Last Change: 2026-02-18.
 "
 " System name
 if has('win32') || has('win64')
@@ -57,6 +57,7 @@ set hlsearch
 set ignorecase
 packadd! matchit
 set scrolloff=0
+set completeopt=menuone
 
 "---------------------------------------------------------------------------
 " 整形に関するオプション
