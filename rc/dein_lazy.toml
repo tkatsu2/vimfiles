@@ -8,7 +8,7 @@ on_ft = ['ruby', 'eruby']
 if = 1
 
 [[plugins]]
-repo = 'tkatsu2/vim-erblint'
+repo = 'tkatsu/vim-erblint'
 rev = 'master'
 on_ft = ['eruby']
 if = 1
@@ -119,10 +119,10 @@ hook_source = '''
 repo = 'honza/vim-snippets'
 
 [[plugins]]
-repo = 'tkatsu2/vim-c-snippets'
+repo = 'tkatsu/vim-c-snippets'
 depends = ['neosnippet-snippets', 'vim-snippets', 'deoplete.nvim', 'neosnippet']
 if = 1
-on_ft = ['c']
+on_ft = ['c', 'memo']
 hook_source = '''
   let g:my_copyright_name = 'My Corpolation.'
 '''
@@ -172,7 +172,7 @@ on_ft = ['ruby']
 [[plugins]]
 #repo = 'justmao945/vim-clang'
 # オリジナルに対し、不要なダイアログが表示されることへの回避策を追加
-repo = 'tkatsu2/vim-clang'
+repo = 'tkatsu/vim-clang'
 on_ft = ['c','cpp']
 depends = ['syntastic', 'neosnippet']
 hook_source = '''
@@ -250,7 +250,7 @@ hook_source = '''
 [[plugins]]
 # ファイル全体ではなく、範囲を指定して ClangFormat する。
 #repo = 'rhysd/vim-clang-format'
-repo = 'tkatsu2/vim-clang-format'
+repo = 'tkatsu/vim-clang-format'
 # オリジナルに対し、 vimproc と一緒に使うとエラーになることへの回避策を追加
 on_ft = ['c', 'cpp', 'h']
 depends = ['vim-operator-user']
@@ -271,7 +271,7 @@ repo = 'tpope/vim-dispatch'
 #[[plugins]]
 ##repo = 'OmniSharp/omnisharp-vim'
 ##オリジナルに対し、OmniServer がスタートするのを待つことを促すダイアログを追加
-#repo = 'tkatsu2/omnisharp-vim'
+#repo = 'tkatsu/omnisharp-vim'
 #depends = ['deoplete.nvim', 'syntastic', 'vim-dispatch', 'ultisnips','unite.vim']
 #if = ''' 0 && has('python') && !has('unix') && dein#tap('deoplete.nvim') '''
 #timeout = 1800
